@@ -1,0 +1,53 @@
+
+.container {
+	margin: 0 auto;
+	width:600px;
+}
+
+.table-of-contents{
+	position: fixed;
+	top: 25px;
+	left: 25px;
+	line-height: 30px;
+}
+body {
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+	color: white;
+	background:url('Images/wallpaper.jpg');
+	line-height: 18px;
+}
+
+h1 {
+	padding-left: 35px;
+	padding-top: 50px;
+	padding-bottom: 15px;
+	font-family: 'Amatic SC', cursive;
+	font-size: 60px;
+	color: pink;
+}
+
+h2 {
+	font-family: 'Amatic SC', cursive;
+	padding-left: 35px;
+	font-size: 36px;
+	color: pink;
+}
+
+p {
+	padding-left: 35px;
+}
+a {
+	color: pink;
+	text-decoration: none;
+}
+.pinky {
+	color: pink;
+	font-family: 'Amatic SC', cursive;
+	font-size: 24px;
+}
+
+.container li {
+	padding-bottom: 80px;
+	padding-top: 5px;
+}
