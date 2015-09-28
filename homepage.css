@@ -12,14 +12,15 @@ h1 {
 
 .table-of-contents {
 	position: fixed;
-	width: 160px;
-	top: 25px;
+	width: 150px;
+	top: 45px;
 	left: 50px;
 	background-color: rgba(255,255,255,.3);
 	padding: 8px;
 }
 .table-of-contents p {
 	margin-top: -5px;
+	font-size: 20px;
 }
 
 a {
@@ -35,4 +36,9 @@ a:hover {
 .container {
 	width: 800px;
 	margin: 0 auto;
+}
+
+img {
+	margin-left:250px;
+	margin-top: 800px;
 }
