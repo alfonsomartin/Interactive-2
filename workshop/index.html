@@ -1,0 +1,245 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>A House of Dust</title>
+	
+	<!-- 
+	***** START CSS ***** 
+	-->
+	<style>
+
+		/* You can change the colors, font, and so on below */
+
+		body {
+			margin: 275px;
+			font-size: 40px;
+			font-family: Arial, Verdana, sans-serif;
+			line-height: 60px;
+
+		}
+
+		.button-container {
+			position: fixed;
+			bottom: 75px;
+			left: 275px;
+		}
+
+		.list-one {
+			text-indent: 1em;
+			color: red;
+		}
+
+		.list-two {
+			text-indent: 1em;
+			color: lime;
+		}
+
+		.list-three {
+			text-indent: 1em;
+		}
+
+		.list-four {
+			text-indent: 1em;
+		}
+
+	</style>
+	<!-- 
+	***** END CSS ***** 
+	-->
+
+
+	<!-- 
+	***** START JAVASCRIPT ***** 
+	-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+
+			// list one content
+			var one = [
+				"My glass",
+				"My dog",
+				"My hat",
+				"My sweats",
+				"My boxers",
+				"My cup",
+				"My shells",
+				"My life",
+				"My city",
+				"My chicken",
+				"My chair",
+				"My stick",
+				"My bean",
+				"My butterfly",
+				"That leaf",
+				"That cloud",
+				"That crane",
+				"That hill",
+				"His butt",
+				"That weed",
+				"My back",
+				"That wood",
+				"That tent",
+				"My spirit",
+				"That fire",
+				"My radio",
+				"My waves",
+				"That cone"
+
+			];
+
+			// list two content
+			var two = [
+				"is lazy",
+				"is sexy",
+				"is out",
+				"is ugly",
+				"is black",
+				"is green",
+				"is rough",
+				"is high",
+				"is curious",
+				"is hot",
+				"is cute",
+				"is square",
+				"is dirty",
+				"is metal",
+				"is dead",
+				"is dry",
+				"is loud",
+				"is back",
+				"is sad",
+				"is empty",
+				"is red",
+				"is free",
+				"is paid for"
+			];
+
+			// list three content
+			var three = [
+				"and I seek",
+				"and I endorse",
+				"and I drop",
+				"and I push",
+				"and I snap to",
+				"and I run with",
+				"and I express my feelings to",
+				"and I turn to",
+				"and I work for",
+				"and I stroll with",
+				"and I dance with",
+				"and I walk with",
+				"and I report to",
+				"and I sit on",
+				"and I honor",
+				"and I play with",
+				"and I krank with",
+				"and I use up my"
+
+
+
+			];
+
+			// list four content
+			var four = [
+				"glasses",
+				"dogs",
+				"hats",
+				"sweats",
+				"boxers",
+				"cups",
+				"shells",
+				"life",
+				"cities",
+				"chickens",
+				"chairs",
+				"sticks",
+				"beans",
+				"butterflies",
+				"leaves",
+				"clouds",
+				"cranes",
+				"hills",
+				"his butt",
+				"weed",
+				"my back",
+				"wood",
+				"tents",
+				"spirits",
+				"fire",
+				"radios",
+				"waves",
+				"cones"
+			];
+
+			// This is a very common randomizing function.
+			// It takes a list (array) and returns one at random.
+			function select_random(x){
+				y = x[Math.floor(Math.random()*x.length)];
+				return y;
+			}
+
+			function generate(){
+
+				// Select a random item from each list
+				var selected_one = select_random(one);
+				var selected_two = select_random(two);
+				var selected_three = select_random(three);
+				var selected_four = select_random(four);
+
+				// Take the selected (random) item from list and make it visible
+				$('.list-one').html(selected_one);
+				$('.list-two').html(selected_two);
+				$('.list-three').html(selected_three);
+			    $('.list-four').html(selected_four);
+
+			}
+
+			$('button').click(function(){
+				generate();
+			});
+
+			generate();
+			
+		});
+
+	</script>
+	<!-- 
+	***** END JAVASCRIPT ***** 
+	-->
+
+</head>
+
+<body>
+
+	<!--
+	This is the button.
+	-->
+	<div class="button-container">
+		<button>Again</button>
+	</div>
+
+	<!--
+	This is the visible portion.
+
+	If you want your words or phrases to go side-by-side, change...
+
+	<div></div>
+	to
+	<span></span>
+
+	in the code below.
+	-->
+	<div class="list-one"></div>
+	<div class="list-two"></div>
+	<div class="list-three"></div>
+	<div class="list-four"></div>
+
+</body>
+
+</html>

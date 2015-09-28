@@ -1,22 +1,27 @@
-body {
-	background:url('QT.jpg');
-	background-repeat: no-repeat;
+body {	
+	background:url('images/QT-3.jpg');
 	font-size: 24px;
 	font-family: Arial, sans-serif;
 }
+
 h1 {
 	font-family: 'Astloch', cursive;
 	font-weight: 700;
 	font-size: 48px;
 }
-p {
-	
+
+.table-of-contents {
+	position: fixed;
+	width: 160px;
+	top: 25px;
+	left: 50px;
+	background-color: rgba(255,255,255,.3);
+	padding: 8px;
+}
+.table-of-contents p {
+	margin-top: -5px;
 }
 
-.container {
-	width: 800px;
-	margin: 0 auto;
-}
 a {
 	text-decoration: none;
 	color: white;
@@ -25,4 +30,9 @@ a {
 }
 a:hover {
 	color: black;
+}
+
+.container {
+	width: 800px;
+	margin: 0 auto;
 }
