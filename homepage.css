@@ -12,7 +12,7 @@ h1 {
 
 .table-of-contents {
 	position: fixed;
-	width: 150px;
+	width: 140px;
 	top: 45px;
 	left: 50px;
 	background-color: rgba(112,102,150,.4);
@@ -35,10 +35,8 @@ a:hover {
 
 .container {
 	width: 800px;
+	height: 800px;
 	margin: 0 auto;
 }
 
-img {
-	margin-left:250px;
-	margin-top: 800px;
-}
+
