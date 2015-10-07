@@ -2,11 +2,61 @@
 <html>
 <head>
 <title>Alfonso Project2 Lv5</title>
+<style>
+body {
+	border: 60px dashed black;
+	color: white;
+}
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+.fadeIn {
+  animation-name: fadeIn;
+  animation-duration: 8s;
+}
+
+.big {
+	font-size: 121px;
+	font-family: Arial;
+	color: orange;
+	text-align: center;
+}
+.container {
+	width:400px;
+	background: blue;
+	margin: 0 auto;
+	padding:100px;
+	margin-bottom: 30px;
+	position: relative;
+}
+.realBig {
+	font-size: 500px;
+	float: right;
+	color: yellow;
+	position: absolute;
+	left: 330px;
+	bottom: 50px;
+	right: 50px;
+	clear: both;
+}
+
+span{
+	color: lime;
+	font-family: cursive;
+	font-size: 48px;
+}
+</style>
 </head>
 <body>
+<div class="big">NO TIME TO FEEL</div>
 
-<p>NO TIME TO FEEL
- Tom Greening</p>
+<div class="container">
+ 
+<div class="fadeIn"><span>Tom Greening</span></div>
+
+<div class="fadeIn">
 
 The way that I've arranged my life,<br>
 
@@ -54,7 +104,11 @@ but merely to survive,<br>
 
 but will I mourn when I'm near death<br>
 
-not having been alive?<br>
+not having been alive?
+</div>
+<div class= "realBig" class="fadeIn">&#9731;</div>
+
+</div>
 
 </body>
 </html>
