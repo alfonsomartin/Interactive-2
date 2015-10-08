@@ -12,12 +12,15 @@ h1 {
 
 .container {
 	width: 800px;
+	height: 800px;
 	margin: 0 auto;
 }
 .column {
 	background: rgba(116,102,205,0.6);
 	padding: 5px 10px 10px 10px;
 	width: 85px;
+	float: left;
+	margin-right: 10px;
 }
 a {
 	text-decoration: none;
@@ -27,4 +30,19 @@ a {
 }
 a:hover {
 	color: black;
+}
+p {
+	font-size: 30px;
+	color: black;
+}
+
+p:hover {
+	color: pink;
+}
+
+.bubbles {
+	display: block;
+	position: absolute;
+	right:250px;
+	top: 200px;
 }
