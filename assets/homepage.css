@@ -1,0 +1,55 @@
+body {	
+	background: black;
+	font-family: Arial, sans-serif;
+	color:yellow;
+}
+
+h1 {
+	font-family: 'Astloch', cursive;
+	font-weight: 700;
+	font-size: 48px;
+	color: white;
+}
+
+video {
+	position: fixed;
+	right:-170px;
+	top: 120px;
+}
+
+p {
+	color: white;
+	font-size: 24px;
+}
+
+.table-of-contents {
+	position: fixed;
+	width: 140px;
+	top: 45px;
+	left: 50px;
+	background-color: rgba(112,102,150,.4);
+	padding: 8px;
+	line-height: 1.8em;
+}
+.table-of-contents p {
+	margin-top: -1px;
+	font-size: 20px;
+}
+
+a {
+	text-decoration: none;
+	color: white;
+	font-size: 18px;
+	line-height: 24px;
+}
+a:hover {
+	color: pink;
+}
+
+.container {
+	width: 800px;
+	margin: 0 auto;
+}
+
+
+

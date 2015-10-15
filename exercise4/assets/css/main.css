@@ -1,0 +1,150 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background: black;
+}
+
+.canvas {
+	width: 900px;
+	height: 556px;
+	margin: 100px auto;
+	background: white;
+	position: relative;
+}
+.canvas.red {
+	background: red;
+}
+
+.object {
+	position: absolute;
+}
+
+/* sphere */
+.sphere {
+	background: white;
+	width: 250px;
+	height: 250px;
+	border-radius: 50%;
+	bottom: 100px;
+	right:300px;
+}
+
+/*vase*/
+.vase-container {
+	height: 400px;
+	width: 125px;
+	bottom: 75px;
+	left: 300px;
+	z-index: 1;
+}
+.vase {
+	height: 250px; 
+	width: 125px;
+	background: green;
+	opacity: 0.5;
+	bottom: 0;
+}
+.vase-bottom {
+	height: 50px; 
+	width: 125px;
+	border-radius: 50%;
+	bottom: -25px;
+	background: green;
+}
+
+/*flowers*/
+.flowers {
+	height: 400px;
+	width: 125px;
+	bottom: -10px;
+}
+.flowers.one {
+	left:30px;
+}
+.flowers.two {
+	left:60px;
+}
+.flowers.three {
+	left:90px;
+}
+
+.stem {
+	background: lime;
+	width: 10px;
+	height: 400px;
+	bottom: 0	
+}
+.petal {
+	background: purple;
+	width: 100px;
+	height: 25px;
+	border-radius: 50%;
+	top: -10px;
+	left: -50px;
+}
+
+.pumpkin {
+	background: orange;
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	bottom: 100px;
+	right:100px;
+}
+
+/*2nd Canvas*/
+
+.canvas.two {
+	background: gray;
+}
+
+.paper {
+    width: 570px;
+    height: 200px;
+    -webkit-transform: skew(57deg);
+    -moz-transform: skew(50deg);
+    -o-transform: skew(50deg);
+    background: #A8E6CE;
+    bottom: 44px;
+    right: 160px;
+}
+.canvas.two .sphere {
+	background: #F3EDED;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    bottom: 170px;
+    right: 237px;
+}
+
+.canvas.two .pumpkin{
+	background: orange;
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	bottom: 165px;
+    right: 460px;
+}
+.banana {
+	width: 253px;
+    height: 132px;
+    border-radius: 50%;
+    box-shadow: 31px 54px 0 0 #CED226;
+    -webkit-transform: rotateX(180deg);
+
+}
+.banana.one {
+	bottom: 41px;
+    right: 418px;
+    width: 270px;
+    height: 142px;
+}
+
+.banana.two {
+    box-shadow: 18px 47px 0 0 #AFB31F;
+    bottom: 30px;
+    right: 430px;
+    width: 204px;
+}
