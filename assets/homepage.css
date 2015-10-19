@@ -13,7 +13,7 @@ h1 {
 
 video {
 	position: fixed;
-	right:-170px;
+	right:-150px;
 	top: 120px;
 	z-index: -1;
 }
@@ -48,7 +48,7 @@ a:hover {
 }
 
 .container {
-	width: 800px;
+	width: 700px;
 	margin: 0 auto;
 }
 
