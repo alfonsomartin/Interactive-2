@@ -2,6 +2,7 @@ body {
 	background: black;
 	font-family: Arial, sans-serif;
 	color:yellow;
+	overflow: hidden;
 }
 
 h1 {
@@ -12,10 +13,10 @@ h1 {
 }
 
 video {
-	position: fixed;
-	right:-150px;
-	top: 120px;
-	z-index: -1;
+    position: fixed;
+    left: -1px;
+    top: -2px;
+    z-index: -1;
 }
 
 p {
@@ -26,9 +27,9 @@ p {
 .table-of-contents {
 	position: fixed;
 	width: 140px;
-	top: 45px;
+	top: 85px;
 	left: 50px;
-	background-color: rgba(112,102,150,.4);
+	background-color: rgba(112,102,150,.5);
 	padding: 8px;
 	line-height: 1.8em;
 }
@@ -51,6 +52,7 @@ a:hover {
 	width: 700px;
 	margin: 0 auto;
 }
+
 
 
 

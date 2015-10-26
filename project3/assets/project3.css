@@ -1,0 +1,77 @@
+body {
+	background: rgba(255,0,230,0.3);
+	overflow: hidden;
+}
+
+h1 {
+	font-family: 'Bonbon';
+}
+	
+p {
+	font-family: Arial;
+}
+a {
+	text-decoration: none;
+	color: black;
+	font-size: 30px;
+}
+a:hover {
+	color: blue;
+}
+
+.container {
+    width: 400px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.letter {
+	height: 170px;
+    width: 170px;
+    margin-left: 110px;
+/*	background: yellow;*/
+}
+.sphere {
+	position: relative;
+	background: aqua;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	transition: all .3s ease-in-out;
+} 
+.sphere:hover {
+	transform: scale(1.5);
+}
+.sphere.one {
+	top: -10px;
+}
+
+.sphere.two {
+	top: -20px;
+}
+.sphere.three {
+	top: -30px;
+}
+.sphere.middle {
+    right: -85px;
+    top: -335px;
+}
+.sphere.middle.two {
+	right: -40px;
+	top: -385px;
+}
+.sphere.lefty {
+ 	right: -125px;
+ 	top: -200px;
+} 
+
+.sphere.one.lefty {
+	top: -210px;
+}
+
+.sphere.two.lefty {
+	top: -220px;
+}
+.sphere.three.lefty {
+	top: -230px;
+}
