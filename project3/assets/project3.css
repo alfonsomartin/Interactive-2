@@ -1,6 +1,5 @@
 body {
 	background: rgba(255,0,230,0.3);
-	overflow: hidden;
 }
 
 h1 {
@@ -16,11 +15,11 @@ a {
 	font-size: 30px;
 }
 a:hover {
-	color: blue;
+	color: aqua;
 }
 
 .container {
-    width: 400px;
+    width: 600px;
     margin: 0 auto;
     text-align: center;
 }
@@ -28,50 +27,172 @@ a:hover {
 .letter {
 	height: 170px;
     width: 170px;
-    margin-left: 110px;
-/*	background: yellow;*/
+    margin-left: 20px;
+    margin-bottom: 20px;
+    position: relative;
+	background: yellow;
+	display: inline-block;
 }
+
 .sphere {
-	position: relative;
-	background: aqua;
+	position: absolute;
+	background: rgba(131,224,224,0.48);
+	/*border: 1px aqua solid;*/
 	width: 50px;
 	height: 50px;
 	border-radius: 50%;
 	transition: all .3s ease-in-out;
 } 
+
+.sphere:after {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	content: '';
+	background: rgba(255, 255, 255, 0.75);
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+}
 .sphere:hover {
 	transform: scale(1.5);
 }
-.sphere.one {
-	top: -10px;
+
+/*AAAAAAAAAAAAAA*/
+.sphere.A1 {
+	left: 60px;
+}
+.sphere.A2 {
+	top: 40px;
+	left: 40px;
+}
+.sphere.A3 {
+	top: 40px;
+	left: 80px;
+}
+.sphere.A4 {
+	top: 80px;
+	left: 20px;
+}
+.sphere.A5 {
+	top: 80px;
+	left: 100px;
+}
+.sphere.A6 {
+	top: 120px;
+	left: 0px;
+}
+.sphere.A7 {
+	top: 120px;
+	right: 0px;
+}
+.sphere.A8 {
+	top: 80px;
+	left: 60px;
 }
 
-.sphere.two {
-	top: -20px;
+/*BBBBBBBBBBBBB*//*DDDDDDDDDDDD*//*EEEEEEEEEEE*/
+/*FFFFFFFFFFFF*/
+.sphere.BD2 {
+	top:40px;
 }
-.sphere.three {
-	top: -30px;
+.sphere.BD3 {
+	top:80px;
 }
-.sphere.middle {
-    right: -85px;
-    top: -335px;
+.sphere.BD4 {
+	top:120px;
 }
-.sphere.middle.two {
-	right: -40px;
-	top: -385px;
+.sphere.BD5 {
+	left:40px;
 }
-.sphere.lefty {
- 	right: -125px;
- 	top: -200px;
-} 
+.sphere.BD6 {
+	left:80px;
+}
+.sphere.BD7 {
+	top: 30px;
+	left:110px;
+}
+.sphere.BD8 {
+    right: 40px;
+    top: 60px;
+}
+.sphere.BD9 {
+    right: 80px;
+    top: 60px;
+}
+.sphere.BD10 {
+    right: 40px;
+    bottom: 0px;
+}
+.sphere.BD11 {
+    right: 80px;
+    bottom: 0px;
+}
+.sphere.BD12 {
+	left:110px;
+	bottom: 30px;
+}
+.sphere.D1 {
+	left:110px;
+	bottom: 60px;
+}
+.sphere.D2 {
+	top: 25px;
+	left:110px;
+}
+.sphere.D3 {
+	left:110px;
+	bottom: 25px;
+}
 
-.sphere.one.lefty {
-	top: -210px;
+
+
+/*CCCCCCCCCCC*//*GGGGGGGGGGGG*/
+.sphere.C1 {
+	left: 60px;
+}
+.sphere.C2 {
+	left: 20px;
+	top: 10px;
+}
+.sphere.C3 {
+	left: 0px;
+	top:40px;
+}
+.sphere.C4 {
+	left: 0px;
+	top:80px;
+}
+.sphere.C5 {
+	left: 20px;
+	bottom: 10px;
+}
+.sphere.C6 {
+	left: 60px;
+	bottom: 0px;
+}
+.sphere.C7 {
+	left: 100px;
+	top: 10px;
+}
+.sphere.C8 {
+	left: 100px;
+	bottom: 10px;
+}
+.sphere.G1 {
+	right: 0px;
+	top: 80px;
+}
+.sphere.G2 {
+	right: 40px;
+	top: 80px;
 }
 
-.sphere.two.lefty {
-	top: -220px;
+/*IIIIIIIIIIII*/
+
+.sphere.I1 {
+
 }
-.sphere.three.lefty {
-	top: -230px;
-}
+
+
+

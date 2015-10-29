@@ -1,0 +1,75 @@
+body {	
+	background: black;
+	font-family: Arial, sans-serif;
+	color:yellow;
+	overflow-x: hidden;
+}
+
+h1 {
+	font-family: 'Astloch', cursive;
+	font-weight: 700;
+	font-size: 48px;
+	color: white;
+
+}
+
+h2 {
+	color: white;
+	font-size: 24px;
+	font-weight: normal;
+}
+
+h6 {
+	font-size: 14px;
+	margin-top: -1px;
+	font-weight: normal;
+	text-align: left;
+}
+span {
+	font-size: 10px;
+	color: white;
+}
+.table-of-contents {
+	position: fixed;
+	width: 140px;
+	top: 85px;
+	left: 50px;
+	background-color: rgba(112,102,150,.5);
+	padding: 10px;
+	line-height: 1.8em;
+
+}
+.table-of-contents p {
+	margin-top: -1px;
+	font-size: 20px;
+}
+img {
+	width: 100%;
+}
+video {
+	width: 100%;
+}
+a {
+	text-decoration: none;
+	color: white;
+	font-size: 14px;
+	line-height: 24px;
+}
+a:hover {
+	color: pink;
+}
+
+.container {
+	width: 400px;
+	margin: 0 auto;
+
+}
+.me {
+	position: fixed;
+	right: -20px;
+	bottom: 15px;
+	width: 15%;
+	z-index: 2;
+}
+
+

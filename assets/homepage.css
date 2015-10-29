@@ -53,6 +53,11 @@ a:hover {
 	margin: 0 auto;
 }
 
-
+.extras {
+	position: fixed;
+	right:-25px;
+	bottom: -90px;
+	transform: scale(0.5);
+}
 
 

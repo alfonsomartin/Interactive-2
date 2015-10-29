@@ -1,0 +1,68 @@
+
+video {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: -1;
+}
+body {
+	background: #B6A1D0;
+}
+h1 {
+	text-decoration: none;
+	color: white;
+	font-style: bold;
+	font-family: Arial, sans-serif;
+	text-align: center;
+	margin-top: 23%;
+}
+p {
+	font-family: Arial, sans-serif;
+	position: fixed;
+	bottom: 8px;
+	left: 90px;
+	background: rgba(0,0,0,0.6);
+	padding: 5px;
+	color: white;
+}
+img {
+	margin-left: 82px;
+	width: 36%;
+}
+.QT {
+	width:80%;
+}
+.nav {
+	color: pink;
+	font-size: 18px;
+	text-decoration: none;
+	position: fixed;
+	width:160px;
+	bottom: 0;
+	right:0;
+	padding: 0 5px;
+	display: inline-block;
+	text-align: center;
+	margin: 0 auto;
+	font-family: Arial, sans-serif;
+	font-weight: normal;
+	line-height: normal;
+	font-style: normal;
+	background: rgba(0,0,0,0.6);
+}
+
+
+a {
+	text-decoration: none;
+}
+.nav a:link {
+	text-decoration: none;
+}
+.nav a:visited {
+	text-decoration: none;
+	color: white;
+}
+.nav a:hover {
+	color: pink;
+}
+
