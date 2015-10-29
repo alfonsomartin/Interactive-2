@@ -1,7 +1,7 @@
 
 video {
 	position: fixed;
-	top: 0;
+	top: 14px;
 	left: 0;
 	z-index: -1;
 }
@@ -27,10 +27,16 @@ p {
 }
 img {
 	margin-left: 82px;
+	margin-top: 20px;
 	width: 36%;
 }
 .QT {
-	width:80%;
+	width:39%;
+	float: left;
+}
+
+.QT2 {
+	width:70%;
 }
 .nav {
 	color: pink;
@@ -54,6 +60,10 @@ img {
 
 a {
 	text-decoration: none;
+	color: white;
+}
+a:hover {
+	color: pink;
 }
 .nav a:link {
 	text-decoration: none;
