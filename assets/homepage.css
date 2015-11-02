@@ -54,10 +54,10 @@ a:hover {
 }
 
 .extras {
-	position: fixed;
-	right:-25px;
-	bottom: -90px;
-	transform: scale(0.5);
+    position: fixed;
+    right: -25px;
+    bottom: -90px;
+    transform: scale(0.5);
 }
 
 
