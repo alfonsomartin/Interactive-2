@@ -1,5 +1,5 @@
 body {
-	background: rgba(255,0,230,0.3);
+/*	background: rgba(255,0,230,0.3);*/
 }
 
 h1 {
@@ -30,7 +30,7 @@ a:hover {
     margin-left: 20px;
     margin-bottom: 20px;
     position: relative;
-	background: yellow;
+/*	background: yellow;*/
 	display: inline-block;
 }
 

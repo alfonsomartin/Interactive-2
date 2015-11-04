@@ -1,22 +1,33 @@
 body {
 	background: linear-gradient(#353358, #77B7E5);
-	height: 4100px;
+}
+html, body {
+    margin:0;
+    padding:0;
+    overflow-x: hidden;
+}
+/*----------------------------Header*/
+.head {
+	width: 100%;
 	display: block;
+	position: relative;
 }
 
 h1 {
 	color: white;
-	margin-top: 225px;
+	padding-top: 60px;
+	width: 900px;
 	margin-right: auto;
 	margin-left: auto;
 	font-family: 'Work Sans', sans-serif;
 	font-weight: 300;
 	font-size: 72px;
-	text-align: center; 
+	text-align: center;
+	position: relative; 
 }
 h2 {
 	color: white;
-	margin-top: 50px;
+	padding-top: 30px;
 	margin-right: auto;
 	margin-left: auto;
 	font-family: 'Work Sans', sans-serif;
@@ -26,38 +37,626 @@ h2 {
 	text-align: center;
 	line-height: 1.4em;
 }
+
+/*----------------------------map*/
+.mapcontainer {
+	display: block;
+	margin-top: 200px;
+	width: 100%;
+	position: relative;
+} 
+img {
+	width: 100%;
+}
+.head img {
+    width: 100px;
+    position: fixed;
+    top: 25px;
+    left: 25px;
+    z-index: 10;
+
+
+}
+.blankCover {
+	position:fixed;
+	background:  rgba(255, 0, 255, 0.0);
+	height: 800px;
+	width: 100%;
+	top: 0px;
+	z-index: 3;
+
+}
+#labels {
+    position: absolute;
+    width: 350px;
+    height: 75px;
+    background: rgba(255, 0, 255, 0.0);
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 400;
+    z-index: 5;
+    font-size: 16px;
+}
+#labels2 {
+    position: absolute;
+    width: 700px;
+    height: 75px;
+    background: rgba(255, 0, 255, 0.0);
+    font-family: 'Work Sans', sans-serif;
+    z-index: 5;
+}
+.uno {
+    top: 220px;
+    left: 90px;
+    color: white; 
+}
+
+.dos {
+    top: 380px;
+    left: 90px;
+    color: white; 
+}
+
+.tres {
+    top: 790px;
+    left: 250px;
+    color: #353358;
+}
+
+.cuatro {
+    top: 1350px;
+    left: 90px;
+    color: white; 
+}
+.date {
+    right: -150px;
+    bottom: 0px;
+    color: white;
+}
+#startFinish {
+    position: absolute;
+    right: 300px;
+    top: 310px;
+    z-index: 10;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%; 
+    font-family: 'Work Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+#startFinish2 {
+    position: absolute;
+    left: 270px;
+    top: 2700px;
+    z-index: 10;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%; 
+    font-family: 'Work Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+#time {
+    position: absolute;
+    left: 0px;
+    top: 90px;
+    z-index: 11;
+    height: 2650px;
+    width: 50px;
+/*    background: rgba(255, 0, 255, 0.1);*/ 
+}
+h4 {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 14px;
+    color: red;
+    line-height: 28.5em;
+}
+/*----------------------------Table*/
+#table {
+    position: absolute;
+    top: 1740px;
+    left: 90px;
+}
+.tableLabel {
+    top: 1630px;
+    left: 90px;
+    color: #353358;
+}
+.tableLabel2 {
+    top: 1680px;
+    left: 90px;
+    color: white;
+    font-size: 12px;
+    font-weight: 300;
+}
+table, td, th {
+    text-align: center;
+    color: white;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 300;
+}
+
+table {
+    border-collapse: collapse;
+    width: 720px;
+    margin: 0 auto;
+
+}
+
+th {
+    height: 30px;
+    font-weight: 500;
+    border-bottom: 2px white solid;
+}
+td {
+    height: 50px;
+}
+/*----------------------------people and info*/
+.person {
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    background: rgba(255, 0, 255, 0.0);
+    z-index: 4;
+}
+.info  {
+	position:absolute;
+	width: 100px;
+	height: 40px;
+    padding: 5px;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #353358;
+    text-align: center;
+	background: rgba(255, 255, 255, 0.8);
+	z-index: 2;
+	opacity: 0;
+	border-radius: 10%;
+    transition: .2s ease-in;
+}
+.clickNine {
+    top: 1650px;
+    right: 185px;
+}
+.info:before {
+   content:"";
+   position: absolute;
+   left: 100%;
+   top: 26px;
+   width: 0;
+   height: 0;
+    border-top: 9px solid transparent;
+    border-left: 22px solid #353358;
+    border-bottom: 9px solid transparent;
+}
+#clicker:hover .info {
+	opacity: 1;
+	border: 2px #353358 solid;
+	z-index: 8;
+} 
+/*----------------------------1st person*/
+.clickOne {
+    top: 370px;
+    right: 285px;
+}
+.info.one {
+	top: 370px;
+	right: 375px;
+}
+/*----------------------------------------2nd person*/
+.clickTwo {
+	top: 510px;
+    right: 355px;
+}
+.info.two {
+	top: 510px;
+    right: 445px;
+}
+/*----------------------------------------3rd person*/
+.clickThree {
+    top: 685px;
+    right: 415px;
+}
+.info.three {
+    top: 685px;
+    right: 505px;
+}
+/*----------------------------------------4th person*/
+.clickFour {
+    top: 850px;
+    right: 415px;
+}
+.info.four {
+    top: 850px;
+    right: 505px;
+}
+/*----------------------------------------5th person*/
+.clickFive {
+    top: 1020px;
+    right: 345px;
+}
+.info.five {
+    top: 1020px;
+    right: 445px;
+}
+/*----------------------------------------6th person*/
+.clickSix {
+    top: 1240px;
+    right: 275px;
+}
+.info.six {
+    top: 1240px;
+    right: 375px;
+}
+/*----------------------------------------7th person*/
+.clickSeven {
+	top: 1390px;
+    right: 245px;
+}
+.info.seven {
+	top: 1390px;
+    right: 335px;
+}
+/*----------------------------------------8th person*/
+.clickEight {
+    top: 1520px;
+    right: 195px;
+}
+.info.eight {
+    top: 1520px;
+    right: 305px;
+}
+}
+/*----------------------------------------9th person*/
+.clickNine {
+    top: 1650px;
+    right: 185px;
+}
+.info.nine {
+	top: 1650px;
+    right: 275px;
+}
+/*----------------------------------------10th person*/
+.clickTen {
+    top: 1670px;
+    right: 95px;
+}
+.info.ten {
+    top: 1670px;
+    right: 185px;
+}
+/*----------------------------------------11th person*/
+.clickEleven {
+    top: 1760px;
+    right: 195px;
+}
+.info.eleven {
+	top: 1760px;
+    right: 295px;
+}
+/*----------------------------------------12th person*/
+.clickTwelve{
+    top: 1770px;
+    right: 95px;
+}
+.info.twelve {
+    top: 1770px;
+    right: 185px;
+}
+/*----------------------------------------13th person*/
+.clickThirteen{
+    top: 1850px;
+    right: 175px;
+}
+.info.thirteen {
+    top: 1850px;
+    right: 275px;
+}
+/*----------------------------------------14th person*/
+.clickFourteen{
+	top: 1860px;
+    right: 35px;
+}
+.info.fourteen {
+    top: 1860px;
+    right: 125px;
+}
+/*----------------------------------------15th person*/
+.clickFifteen{
+	top: 1870px;
+    right: 275px;
+}
+.info.fifteen {
+    top: 1870px;
+    right: 365px;
+}
+/*----------------------------------------16th person*/
+.clickSixteen{
+ 	top: 1900px;
+    right: 365px;
+}
+.info.sixteen {
+    top: 1900px;
+    right: 455px;
+}
+/*----------------------------------------17th person*/
+.clickSeventeen{
+	top: 1860px;
+    right: 435px;
+}
+.info.seventeen {
+    top: 1860px;
+    right: 525px;
+}
+/*----------------------------------------18th person*/
+.clickEighteen{
+	top: 1930px;
+    right: 115px;
+}
+.info.eighteen {
+    top: 1930px;
+    right: 205px;
+}
+/*----------------------------------------19th person*/
+.clickNineteen{
+	top: 1950px;
+    right: 215px;
+}
+.info.nineteen {
+    top: 1950px;
+    right: 305px;
+}
+/*----------------------------------------20th person*/
+.clickTwenty{
+	top: 1970px;
+    right: 305px;
+}
+.info.twenty {
+    top: 1970px;
+    right: 395px;
+}
+/*----------------------------------------21th person*/
+.clickTwentyone{
+    top: 2050px;
+    right: 125px;
+}
+.info.twentyone {
+    top: 2050px;
+    right: 225px;
+}
+/*----------------------------------------22th person*/
+.clickTwentytwo{
+ 	top: 2050px;
+    right: 235px;
+}
+.info.twentytwo {
+    top: 2050px;
+    right: 325px;
+}
+/*----------------------------------------23th person*/
+.clickTwentythree{
+	top: 2080px;
+    right: 325px;
+}
+.info.twentythree {
+    top: 2080px;
+    right: 415px;
+}
+/*----------------------------------------24th person*/
+.clickTwentyfour{
+    top: 1970px;
+    right: 465px;
+}
+.info.twentyfour {
+    top: 1970px;
+    right: 550px;
+}
+/*----------------------------------------25th person*/
+.clickTwentyfive{
+	top: 2000px;
+    right: 575px;
+}
+.info.twentyfive {
+    top: 2000px;
+    right: 660px;
+}
+/*----------------------------------------26th person*/
+.clickTwentysix{
+    top: 2010px;
+    right: 395px;
+}
+.info.twentysix{
+    top: 2010px;
+    right: 490px;
+}
+/*----------------------------------------27th person*/
+.clickTwentyseven{
+    top: 2080px;
+    right: 475px;
+}
+.info.twentyseven{
+    top: 2080px;
+    right: 560px;
+}
+/*----------------------------------------28th person*/
+.clickTwentyeight{
+	top: 2150px;
+    right: 405px;
+}
+.info.twentyeight{
+    top: 2150px;
+    right: 490px;
+}
+/*----------------------------------------29th person*/
+.clickTwentynine{
+    top: 2110px;
+    right: 545px;
+}
+.info.twentynine{
+    top: 2110px;
+    right: 630px;
+}
+/*----------------------------------------30th person*/
+.clickThirty{
+	top: 2130px;
+    right: 635px;
+}
+.info.thirty{
+    top: 2130px;
+    right: 720px;
+}
+/*----------------------------------------31th person*/
+.clickThirtyone{
+	top: 2040px;
+    right: 705px;
+}
+.info.thirtyone{
+    top: 2040px;
+    right: 790px;
+}
+/*----------------------------------------32th person*/
+.clickThirtytwo{
+	top: 2160px;
+    right: 735px;
+}
+.info.thirtytwo{
+    top: 2160px;
+    right: 820px;
+}
+/*----------------------------------------33th person*/
+.clickThirtythree{
+    top: 2180px;
+    right: 835px;
+}
+.info.thirtythree{
+    top: 2180px;
+    right: 900px;
+}
+/*----------------------------------------34th person*/
+.clickThirtyfour{
+	top: 2230px;
+    right: 775px;
+}
+.info.thirtyfour{
+    top: 2230px;
+    right: 860px;
+}
+/*----------------------------------------35th person*/
+.clickThirtyfive{
+    top: 2300px;
+    right: 855px;
+}
+.info.thirtyfive{
+    top: 2300px;
+    right: 950px;
+}
+/*----------------------------------------36th person*/
+.clickThirtysix{
+    top: 2400px;
+    right: 925px;
+}
+.info.thirtysix{
+    top: 2400px;
+    right: 1010px;
+}
+/*----------------------------------------37th person*/
+.clickThirtyseven{
+    top: 2460px;
+    right: 1005px;
+}
+.info.thirtyseven{
+    top: 2460px;
+    right: 1100px;
+}
+/*----------------------------------------38th person*/
+.clickThirtyeight{
+    top: 2550px;
+    right: 1055px;
+}
+.info.thirtyeight{
+    top: 2550px;
+    right: 1150px;
+}
+/*----------------------------------------39th person*/
+.clickThirtynine{
+    top: 2540px;
+    right: 965px;
+}
+.info.thirtynine{
+    top: 2540px;
+    right: 1050px;
+}
+/*----------------------------------------40th person*/
+.clickFourty{
+    top: 2640px;
+    right: 995px;
+}
+.info.fourty{
+    top: 2640px;
+    right: 1090px;
+}
+
+/*----------------------------------------41th person*/
+.clickFourtyone{
+	top: 2590px;
+    right:905px;
+}
+.info.fourtyone{
+    top: 2590px;
+    right: 990px;
+}
+
+
+
+
+
+/*----------------------------footer*/
+.bottom {
+	width: 100%;
+	height: 635px;
+	display: block;
+	margin-top: -94px;
+	background: #353358;
+    position: relative;
+}
+
+
 h3 {
     color: white;
     margin-top: 80px;
     margin-right: auto;
     margin-left: auto;
+    padding-top: 80px;
     font-family: 'Work Sans', sans-serif;
     font-weight: 200;
     font-size: 48px;
     text-align: center;
 }
-img {
-	width: 100%;
-	position: absolute;
-	top:-250px;
+
+h4 {
+    color: white;
+    padding-top: 30px;
+    margin-right: auto;
+    margin-left: auto;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 400;
+    font-size: 18px; 
+    width: 800px;
+    text-align: left;
+    line-height: 1.4em;
 }
-.bottom {
-	width: 100%;
-	height: 635px;
-	position: absolute;
-	top: 3700px;
-	background: #353358;
+
+.bottom a {
+    color: white;
+    text-decoration: none;
+
 }
-.clicker {
+.bottoma {
+    text-align: left;
+    z-index: 20;
     position: absolute;
-    width: 100px;
-    height: 100px;
-    z-index: 1;
-}
-.clicker:hover {
-	border: 2px red solid;
-}
-.clicker.one {
-	top: 1215px;
-    right: 255px;
+    left: 235px;
+    bottom: 30px;
 }
