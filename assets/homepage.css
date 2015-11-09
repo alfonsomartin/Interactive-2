@@ -14,8 +14,8 @@ h1 {
 
 video {
     position: fixed;
-    left: -100px;
-    top: -2px;
+    left: 0px;
+    top: 0px;
     z-index: -1;
 }
 
@@ -55,8 +55,8 @@ a:hover {
 
 .extras {
     position: fixed;
-    right: -25px;
-    bottom: -90px;
+    right: 0px;
+    bottom: -50px;
     transform: scale(0.5);
 }
 
