@@ -1,28 +1,51 @@
 body {
 	font-family: Arial;
 /*	background: rgba(255,0,230,0.3);*/
+	overflow-x: hidden;
 }
-/*-----------------------------------FOR JAVA */
 
+/*-----------------------------------FOR JAVA */
 .letter-definition {
     display: none;
 }
-/*-----------------------------------BIG CIRCLE*/
+/*-----------------------------------BIG CIRCLE & LIL CIRCLE*/
 .bigCircle {
 	width: 600px;
 	height: 600px;
 	border-radius: 50%;
 /*	border: 1px black solid;*/
 	position: fixed;
-	background: rgba(131,224,224,0.48);
+	background: rgba(131,224,224,0.5);
 	left: 50%;
 	top: 50%;
 	transform: translate(-50%, -50%);
 	z-index: -1;
 }
+.lilCircle {
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+/*	border: 1px black solid;*/
+	position: fixed;
+	background: rgba(131,224,224,0.5);
+	right: 50px;
+	top: 50px;
+	z-index: -1;
+}
+
+.backCircle {
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+/*	border: 1px black solid;*/
+	background: rgba(131,224,224,0.5);
+	margin: 80px auto;
+	text-align: center;
+	font-size: 72px;
+	color: white;
+}
 
 /*-----------------------------------DESCRIPTION PAGE*/
-
 p {
 	width: 450px;
 	font-size: 18px;
@@ -46,15 +69,15 @@ p {
 	height: 170px;
     width: 170px;
     margin-left: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     position: relative;
 	display: inline-block;
-/*	background: yellow;
-*/}
+/*	background: yellow; */
+}
 
 .sphere {
 	position: absolute;
-	background: rgba(131,224,224,0.48);
+	background: rgba(131,224,224,0.5);
 	/*border: 1px aqua solid;*/
 	width: 50px;
 	height: 50px;
@@ -78,6 +101,7 @@ p {
 }
 
 /*AAAAAAAAAAAAAA*/
+
 .sphere.A1 {
 	left: 60px;
 }
@@ -112,6 +136,7 @@ p {
 
 /*BBBBBBBBBBBBB*//*DDDDDDDDDDDD*//*EEEEEEEEEEE*/
 /*FFFFFFFFFFFF*//* A LOT OF OTHER LETTERS */
+
 .sphere.BD2 {
 	top:40px;
 }
@@ -164,9 +189,8 @@ p {
 	bottom: 25px;
 }
 
-
-
 /*CCCCCCCCCCC*//*GGGGGGGGGGGG*/
+
 .sphere.C1 {
 	left: 60px;
 }
@@ -273,6 +297,7 @@ p {
 }
 
 /*KKKKKKKKKK*/
+
 .sphere.K4 {
 	left: 80px;
 	top: 40px;
@@ -293,6 +318,7 @@ p {
 	left: 40px;
 	bottom: 60px;
 }
+
 /*LLLLLLLLLL*/
 
 .sphere.L4 {
@@ -304,8 +330,8 @@ p {
 	bottom: 0px;
 }
 
-
 /*MMMMMMMM*/
+
 .sphere.M4 {
 	left: 40px;
 	top:20px;
@@ -320,6 +346,7 @@ p {
 }
 
 /*NNNNNNNN*/
+
 .sphere.N6 {
 	right: 40px;
 	top:100px;
@@ -350,6 +377,7 @@ p {
 }
 
 /*SSSSSSS*/
+
 .sphere.S3 {
 	top: 20px;
 	right: 0px;
@@ -363,7 +391,6 @@ p {
 	top: 30px;
 	left: 10px;
 }
-
 
 /*TTTTTTTT*/
 
@@ -408,6 +435,7 @@ p {
 }
 
 /*WWWWWWWWw*/
+
 .sphere.W4 {
 	left: 40px;
 	top:100px;
@@ -444,5 +472,76 @@ p {
 	top: 90px;
 }
 
+/*000000000*/
+
+.sphere.zero {
+    left: 15px;
+    top: 40px;
+}
+.sphere.zero2 {
+    left: 15px;
+    top: 80px;
+}
+.sphere.zero3 {
+    left: 100px;
+    top: 40px;
+}
+.sphere.zero4 {
+    left: 100px;
+    top: 80px;
+}
+
+/*1111111111*/
+
+.sphere.onezy {
+	left: 30px;
+	top:20px;
+}
+
+/*22222222*/
+
+.sphere.two1 {
+	top: 30px;
+	left: 10px;
+}
+
+/*4444444*/
+
+.sphere.four1 {
+	top: 80px;
+	left: 90px;
+}
+
+/*88888888*/
+
+.sphere.eight1 {
+	top: 30px;
+	right: 10px;
+}
+
+.sphere.eight2 {
+	bottom: 30px;
+	left: 10px;
+}
+
+/*""""""*/
+
+.sphere.QU1 {
+	top: 30px;
+	left: 80px;
+}
+
+.sphere.QU2 {
+	left:100px;
+}
+
+.sphere.QU3 {
+	top: 30px;
+	right: 80px;
+}
+
+.sphere.QU4 {
+	right: 100px;
+}
 
 
