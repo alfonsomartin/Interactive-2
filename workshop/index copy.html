@@ -1,0 +1,1549 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<!-- 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0"> -->
+	<title>Name Generator</title>
+	
+	<!-- 
+	***** START CSS ***** 
+	-->
+	<style>
+body {
+	font-family: Arial;
+/*	background: linear-gradient(#353358, #77B7E5, #FFF);*/
+	overflow-x: hidden;
+}
+
+button {
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	position: fixed;
+	background: rgba(131,224,224,0.5);
+	right: 25px;
+	top: 130px;
+	z-index: 5;
+	border: 0;
+	transition: all .3s ease-in-out;
+	outline: none;
+	cursor: pointer;
+}
+button:hover {
+	transform: scale(1.5);
+	background: linear-gradient(#353358, #77B7E5, #FFF);
+}
+/*-----------------------------------FOR JAVA */
+.letter-definition {
+    display: none;
+}
+
+.bubbleType {
+	position: relative;
+    bottom: 90px;
+    left: 30px;
+}
+
+/*-----------------------------------BIG CIRCLE & LIL CIRCLE*/
+.bigCircle {
+	width: 580px;
+	height: 580px;
+	border-radius: 50%;
+/*	border: 1px black solid;*/
+	position: fixed;
+	background: rgba(131,224,224,0.5);
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	z-index: -1;
+}
+
+.bigCircle.process {
+	background: rgba(242, 206, 233, 0.7); 
+}
+
+
+.lilCircle {
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+/*	border: 1px black solid;*/
+	position: fixed;
+	background: rgba(131,224,224,0.5);
+	right: 25px;
+	top: 25px;
+	cursor: pointer;
+	transition: all .3s ease-in-out;
+	z-index: 5;
+}
+.lilCircle:hover {
+	transform: scale(1.5);
+	background: none;
+	border: 1px black solid;
+}
+
+.anotherCircle {
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	position: fixed;
+	background: rgba(131,224,224,0.5);
+	right: 25px;
+	top: 240px;
+	cursor: pointer;
+	z-index: 5;
+	transition: all .3s ease-in-out;
+}
+.anotherCircle:hover {
+	transform: scale(1.5);
+	background: rgba(242, 206, 233, 0.7);
+}
+
+.backCircle {
+	width: 300px;
+	height: 300px;
+	border-radius: 50%;
+	margin: 180px auto 300px auto;
+	text-align: center;
+	font-size: 200px;
+	color: white;
+	background: rgba(131,224,224,0.5);
+	z-index: 3;
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+}
+a:active {
+	text-decoration: none;
+}
+a:link {
+	text-decoration: none;
+}
+
+.backCircle:hover {
+	cursor:s-resize;
+}
+
+/*-----------------------------------DESCRIPTION PAGE*/
+p {
+	width: 450px;
+	font-size: 18px;
+	margin: 500px auto;
+	line-height: 1.4em;
+	background: rgba(131,224,224,0.5);
+	width: 450px;
+	padding: 15px;
+}
+
+.scale {
+	transform: scale(0.8);
+}
+
+.scale2 {
+	transform: scale(0.5);
+}
+/*-----------------------------------LETTERS & NUMBERS */
+.container {
+    width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+.container2 {
+    width: 1200px;
+    margin: 30px auto;
+    text-align: center;
+}
+ .hey {
+ 	position: relative;
+ 	left:-210px;
+ 	top: 0px;
+ 	width: 1600px;
+ }
+h2 {
+	line-height: 1.8em;
+	font-weight: normal;
+	margin: -5px auto;
+	background: rgba(131,224,224,0.5);
+	width: 450px;
+	padding: 10px;
+	border-radius: 3%%;
+}
+h2 a:link {
+	color: black;
+}
+h2 a:visited {
+	color: black;
+}
+h2 a:hover {
+	color: magenta;
+}
+
+.moveLeft {
+	position: relative;
+	left: -30px;
+}
+.letter {
+	height: 170px;
+    width: 170px;
+    margin-left: 20px;
+    margin-bottom: 30px;
+    position: relative;
+	display: inline-block;
+/*	background: yellow; */
+}
+
+.sphere {
+	position: absolute;
+	background: rgba(131,224,224,0.5);
+	/*border: 1px aqua solid;*/
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	transition: all .3s ease-in-out;
+} 
+
+.sphere:after {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	content: '';
+	background: rgba(255, 255, 255, 0.75);
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+}
+
+.sphere:hover {
+	transform: scale(1.5);
+}
+
+.style-two {
+	background: none !important;
+	opacity: 1 !important;
+	border: 1px solid black !important;
+	-webkit-text-stroke: 1.5px black;
+}
+
+
+/*.style-three {
+	background: blue !important;
+	opacity: 1 !important;
+}*/
+/*AAAAAAAAAAAAAA*/
+
+.sphere.A1 {
+	left: 60px;
+}
+.sphere.A2 {
+	top: 40px;
+	left: 40px;
+}
+.sphere.A3 {
+	top: 40px;
+	left: 80px;
+}
+.sphere.A4 {
+	top: 80px;
+	left: 20px;
+}
+.sphere.A5 {
+	top: 80px;
+	left: 100px;
+}
+.sphere.A6 {
+	top: 120px;
+	left: 0px;
+}
+.sphere.A7 {
+	top: 120px;
+	right: 0px;
+}
+.sphere.A8 {
+	top: 80px;
+	left: 60px;
+}
+
+/*BBBBBBBBBBBBB*//*DDDDDDDDDDDD*//*EEEEEEEEEEE*/
+/*FFFFFFFFFFFF*//* A LOT OF OTHER LETTERS */
+
+.sphere.BD2 {
+	top:40px;
+}
+.sphere.BD3 {
+	top:80px;
+}
+.sphere.BD4 {
+	top:120px;
+}
+.sphere.BD5 {
+	left:40px;
+}
+.sphere.BD6 {
+	left:80px;
+}
+.sphere.BD7 {
+	top: 30px;
+	left:110px;
+}
+.sphere.BD8 {
+    right: 40px;
+    top: 60px;
+}
+.sphere.BD9 {
+    right: 80px;
+    top: 60px;
+}
+.sphere.BD10 {
+    right: 40px;
+    bottom: 0px;
+}
+.sphere.BD11 {
+    right: 80px;
+    bottom: 0px;
+}
+.sphere.BD12 {
+	left:110px;
+	bottom: 30px;
+}
+.sphere.D1 {
+	left:110px;
+	bottom: 60px;
+}
+.sphere.D2 {
+	top: 25px;
+	left:110px;
+}
+.sphere.D3 {
+	left:110px;
+	bottom: 25px;
+}
+
+/*CCCCCCCCCCC*//*GGGGGGGGGGGG*/
+
+.sphere.C1 {
+	left: 60px;
+}
+.sphere.C2 {
+	left: 20px;
+	top: 10px;
+}
+.sphere.C3 {
+	left: 0px;
+	top:40px;
+}
+.sphere.C4 {
+	left: 0px;
+	top:80px;
+}
+.sphere.C5 {
+	left: 20px;
+	bottom: 10px;
+}
+.sphere.C6 {
+	left: 60px;
+	bottom: 0px;
+}
+.sphere.C7 {
+	left: 100px;
+	top: 10px;
+}
+.sphere.C8 {
+	left: 100px;
+	bottom: 10px;
+}
+.sphere.G1 {
+	right: 0px;
+	top: 80px;
+}
+.sphere.G2 {
+	right: 40px;
+	top: 80px;
+}
+
+/*HHHHHHHHHH*/
+
+.sphere.h2 {
+	top:40px;
+}
+.sphere.h3 {
+	top:80px;
+}
+.sphere.h4 {
+	bottom: 0px;
+}
+.sphere.h5 {
+	right: 0;
+	top:0;
+}
+.sphere.h6 {
+	right: 0;
+	top:40px;
+}
+.sphere.h7 {
+	right:0;
+	top: 80px;
+}
+.sphere.h8 {
+	right:0;
+	bottom: 0px;
+}
+.sphere.h9 {
+	left:40px;
+	top:60px;
+}
+.sphere.h10 {
+	right:40px;
+	top:60px;
+}
+
+/*IIIIIIIIIIII*/
+
+.sphere.I1 {
+	right: 60px;
+}
+.sphere.I2 {
+	right: 60px;
+	top: 40px;
+}
+.sphere.I3 {
+	right: 60px;
+	top: 80px;
+}
+.sphere.I4 {
+	right: 60px;
+	bottom: 0px;
+}
+
+/*JJJJJJJJJJ*/
+
+.sphere.J4 {
+	left: 40px;
+	bottom: 0px;
+}
+.sphere.J3 {
+	left: 10px;
+	bottom: 40px;
+}
+
+/*KKKKKKKKKK*/
+
+.sphere.K4 {
+	left: 80px;
+	top: 40px;
+}
+.sphere.K5 {
+	left: 100px;
+	top: 0px;
+}
+.sphere.K6 {
+	left: 100px;
+	bottom: 0px;
+}
+.sphere.K7 {
+	left: 80px;
+	bottom: 40px;
+}
+.sphere.K8 {
+	left: 40px;
+	bottom: 60px;
+}
+
+/*LLLLLLLLLL*/
+
+.sphere.L4 {
+	left: 80px;
+	bottom: 0px;
+}
+.sphere.L5 {
+	left: 	40px;
+	bottom: 0px;
+}
+
+/*MMMMMMMM*/
+
+.sphere.M4 {
+	left: 40px;
+	top:20px;
+}
+.sphere.M5 {
+	left: 60px;
+	top:60px;
+}
+.sphere.M6 {
+	left: 80px;
+	top: 20px;
+}
+
+/*NNNNNNNN*/
+
+.sphere.N6 {
+	right: 40px;
+	top:100px;
+}
+
+/*OOOOOOOOO*/
+
+.sphere.O1 {
+	right: 0px;
+	top: 40px;
+}
+/*QQQQQQQQQ*/
+
+.sphere.Q1 {
+	right: 0px;
+	bottom: 0px;
+}
+
+/*RRRRRRRR*/
+
+.sphere.R5 {
+	top: 90px;
+	left: 90px;
+}
+.sphere.R7 {
+	bottom: 0px;
+	right: 10px;
+}
+
+/*SSSSSSS*/
+
+.sphere.S3 {
+	top: 20px;
+	right: 0px;
+}
+.sphere.S4 {
+	bottom: 20px;
+	left: 0px;
+}
+
+.sphere.S5 {
+	top: 30px;
+	left: 10px;
+}
+
+/*TTTTTTTT*/
+
+.sphere.T1 {
+	top: 0px;
+	left: 20px;
+}
+.sphere.T2 {
+	top:0;
+	right:20px;
+}
+
+/*VVVVVVVV*/
+
+.sphere.V1 {
+	bottom: 0;
+	left: 60px;
+}
+.sphere.V2 {
+	top: 80px;
+	left: 80px;
+}
+.sphere.V3 {
+	top: 80px;
+	left: 40px;
+}
+.sphere.V4 {
+	top: 40px;
+	left: 20px;
+}
+.sphere.V5 {
+	top: 40px;
+	left: 100px;
+}
+.sphere.V6 {
+	top: 0px;
+	left: 0px;
+}
+.sphere.V7 {
+	top: 0px;
+	right: 0px;
+}
+
+/*WWWWWWWWw*/
+
+.sphere.W4 {
+	left: 40px;
+	top:100px;
+}
+.sphere.W6 {
+	left: 80px;
+	top: 100px;
+}
+
+
+/*XXXXXXXX*/
+
+.sphere.X4 {
+	left: 30px;
+	top:30px;
+}
+.sphere.X5 {
+	left: 90px;
+	top:30px;
+}
+.sphere.X6 {
+	right: 90px;
+	top:90px;
+}
+.sphere.X7 {
+	left: 90px;
+	top: 90px;
+}
+
+/*YYYYYYY*/
+
+.sphere.Y3 {
+	right: 60px;
+	top: 90px;
+}
+
+/*000000000*/
+
+.sphere.zero {
+    left: 15px;
+    top: 40px;
+}
+.sphere.zero2 {
+    left: 15px;
+    top: 80px;
+}
+.sphere.zero3 {
+    left: 100px;
+    top: 40px;
+}
+.sphere.zero4 {
+    left: 100px;
+    top: 80px;
+}
+
+/*1111111111*/
+
+.sphere.onezy {
+	left: 30px;
+	top:20px;
+}
+
+/*22222222*/
+
+.sphere.two1 {
+	top: 30px;
+	left: 10px;
+}
+
+/*4444444*/
+
+.sphere.four1 {
+	top: 80px;
+	left: 90px;
+}
+
+/*88888888*/
+
+.sphere.eight1 {
+	top: 30px;
+	right: 10px;
+}
+
+.sphere.eight2 {
+	bottom: 30px;
+	left: 10px;
+}
+
+/*""""""*/
+
+.sphere.QU1 {
+	top: 30px;
+	left: 80px;
+}
+
+.sphere.QU2 {
+	left:100px;
+}
+
+.sphere.QU3 {
+	top: 30px;
+	right: 80px;
+}
+
+.sphere.QU4 {
+	right: 100px;
+}
+
+		.list-one {
+			text-indent: 1em;
+			color: red;
+		}
+
+		.list-two {
+			text-indent: 1em;
+			color: lime;
+		}
+
+		.list-three {
+			text-indent: 1em;
+		}
+
+		.list-four {
+			text-indent: 1em;
+		}
+
+	</style>
+	<!-- 
+	***** END CSS ***** 
+	-->
+
+</head>
+
+<body>
+
+<div class="lilCircle"></div>
+
+<button> </button>
+
+<a href="bubbleType.html#start"><div class="anotherCircle"></div></a>
+
+<div class="container2">
+
+	<div class="hey">
+	<div class="letters scale2">process</div>
+	</div>
+
+	<!-- Define the letters (invisible) -->
+
+		<div class="letter-definition" data-character=" ">
+			<div class= "letter">
+			</div>
+		</div>
+
+		<div class="letter-definition" data-character="a">
+			<div class= "letter">
+			<div class="sphere A1"></div> 
+			<div class="sphere A2"></div> 
+			<div class="sphere A3"></div> 
+			<div class="sphere A4"></div>
+			<div class="sphere A5"></div>
+			<div class="sphere A6"></div>
+			<div class="sphere A7"></div>
+			<div class="sphere A8"></div>
+			</div>
+		</div>
+
+		<div class="letter-definition" data-character="b">
+			<div class= "letter type">
+			<div class="sphere"></div>
+			<div class="sphere BD2"></div>
+			<div class="sphere BD3"></div>
+			<div class="sphere BD4"></div>
+			<div class="sphere BD5"></div>
+			<div class="sphere BD6"></div>
+			<div class="sphere BD7"></div>
+			<div class="sphere BD8"></div>
+			<div class="sphere BD9"></div>
+			<div class="sphere BD10"></div>
+			<div class="sphere BD11"></div>
+			<div class="sphere BD12"></div>
+			</div>
+		</div>
+
+		<div class="letter-definition" data-character="c">
+			<div class="letter">
+			<div class= "sphere C1"></div>
+			<div class= "sphere C2"></div>
+			<div class= "sphere C3"></div>
+			<div class= "sphere C4"></div>
+			<div class= "sphere C5"></div>
+			<div class= "sphere C6"></div>
+			<div class= "sphere C7"></div>
+			<div class= "sphere C8"></div>
+			</div>
+		</div>
+
+		<div class="letter-definition" data-character="d">
+			<div class="letter">
+			<div class="sphere"></div>
+			<div class="sphere BD2"></div>
+			<div class="sphere BD3"></div>
+			<div class="sphere BD4"></div>
+			<div class="sphere BD5"></div>
+			<div class="sphere BD6"></div>
+			<div class="sphere D2"></div>
+			<div class="sphere D1"></div>
+			<div class="sphere BD10"></div>
+			<div class="sphere BD11"></div>
+			<div class="sphere D3"></div>
+			</div>
+		</div>
+
+		<div class="letter-definition" data-character="e">
+			<div class="letter">
+			<div class="sphere"></div>
+			<div class="sphere BD2 "></div>
+			<div class="sphere BD3"></div>
+			<div class="sphere BD4"></div>
+			<div class="sphere BD5"></div>
+			<div class="sphere BD6"></div>
+			<div class="sphere BD8"></div>
+			<div class="sphere BD9"></div>
+			<div class="sphere BD10"></div>
+			<div class="sphere BD11"></div>
+			</div>
+		</div>
+
+		<div class="letter-definition" data-character="f">
+			<div class="letter">
+			<div class="sphere"></div>
+			<div class="sphere BD2 "></div>
+			<div class="sphere BD3"></div>
+			<div class="sphere BD4"></div>
+			<div class="sphere BD5"></div>
+			<div class="sphere BD6"></div>
+			<div class="sphere BD8"></div>
+			<div class="sphere BD9"></div>
+			</div>
+		</div>
+		
+		<div class="letter-definition" data-character="g">
+			<div class="letter">
+			<div class= "sphere C1"></div>
+			<div class= "sphere C2"></div>
+			<div class= "sphere C3"></div>
+			<div class= "sphere C4"></div>
+			<div class= "sphere C5"></div>
+			<div class= "sphere C6"></div>
+			<div class= "sphere C7"></div>
+			<div class= "sphere C8"></div>
+			<div class= "sphere G1"></div>
+			<div class= "sphere G2"></div>
+			</div>
+		</div>
+		
+		<div class="letter-definition" data-character="h">
+			<div class= "letter">
+			<div class="sphere"></div> 
+			<div class="sphere h2"></div>
+			<div class="sphere h3"></div>
+			<div class="sphere h4"></div>
+			<div class="sphere h5"></div>
+			<div class="sphere h6"></div>
+			<div class="sphere h7"></div>
+			<div class="sphere h8"></div>
+			<div class="sphere h9"></div>
+			<div class="sphere h10"></div>
+			</div> 
+		</div>
+
+		<div class="letter-definition" data-character="i">
+			<div class= "letter">
+			<div class="sphere I1"></div>
+			<div class="sphere I2"></div>
+			<div class="sphere I3"></div>
+			<div class="sphere I4"></div>
+			</div>
+		</div>
+
+		<div class="letter-definition" data-character="j">
+			<div class= "letter">
+			<div class="sphere I1"></div>
+			<div class="sphere I2"></div>
+			<div class="sphere I3"></div>
+			<div class="sphere J4"></div>
+			<div class="sphere J3"></div>
+			</div>
+		</div>
+
+		<div class="letter-definition" data-character="k">
+			<div class="letter">
+			<div class="sphere"></div>
+			<div class="sphere BD2 "></div>
+			<div class="sphere BD3"></div>
+			<div class="sphere BD4"></div>
+			<div class="sphere K4"></div>
+			<div class="sphere K5"></div>
+			<div class="sphere K6"></div>
+			<div class="sphere K7"></div>
+			<div class="sphere K8"></div>
+			</div>
+		</div>
+
+
+		<div class="letter-definition" data-character="l">
+			<div class= "letter type">
+			<div class="sphere"></div>
+			<div class="sphere BD2 "></div>
+			<div class="sphere BD3"></div>
+			<div class="sphere BD4"></div>
+			<div class="sphere L4"></div>
+			<div class="sphere L5"></div>
+			</div>
+		</div>
+
+		<div class="letter-definition" data-character="m">
+			<div class="letter">
+			<div class="sphere"></div>
+			<div class="sphere BD2 "></div>
+			<div class="sphere BD3"></div>
+			<div class="sphere BD4"></div>
+			<div class="sphere M4"></div>
+			<div class="sphere M5"></div>
+			<div class="sphere M6"></div>
+			<div class="sphere h5"></div>
+			<div class="sphere h6"></div>
+			<div class="sphere h7"></div>
+			<div class="sphere h8"></div>
+			</div>
+		</div>
+
+		<div class="letter-definition" data-character="n">
+			<div class="letter">
+			<div class="sphere"></div>
+			<div class="sphere BD2 "></div>
+			<div class="sphere BD3"></div>
+			<div class="sphere BD4"></div>
+			<div class="sphere M4"></div>
+			<div class="sphere M5"></div>
+			<div class="sphere N6"></div>
+			<div class="sphere h5"></div>
+			<div class="sphere h6"></div>
+			<div class="sphere h7"></div>
+			<div class="sphere h8"></div>
+			</div>
+		</div>
+
+		<div class="letter-definition" data-character="o">
+			<div class="letter">
+			<div class= "sphere C1"></div>
+			<div class= "sphere C2"></div>
+			<div class= "sphere C3"></div>
+			<div class= "sphere C4"></div>
+			<div class= "sphere C5"></div>
+			<div class= "sphere C6"></div>
+			<div class= "sphere C7"></div>
+			<div class= "sphere C8"></div>
+			<div class= "sphere G1"></div>
+			<div class= "sphere O1"></div>
+			</div>
+		</div>
+
+		<div class="letter-definition" data-character="p">
+			<div class= "letter type">
+			<div class="sphere"></div>
+			<div class="sphere BD2"></div>
+			<div class="sphere BD3"></div>
+			<div class="sphere BD4"></div>
+			<div class="sphere BD5"></div>
+			<div class="sphere BD6"></div>
+			<div class="sphere BD7"></div>
+			<div class="sphere BD8"></div>
+			<div class="sphere BD9"></div>
+			</div>
+		</div>
+
+		<div class="letter-definition" data-character="q">
+			<div class="letter">
+			<div class= "sphere C1"></div>
+			<div class= "sphere C2"></div>
+			<div class= "sphere C3"></div>
+			<div class= "sphere C4"></div>
+			<div class= "sphere C5"></div>
+			<div class= "sphere C6"></div>
+			<div class= "sphere C7"></div>
+			<div class= "sphere C8"></div>
+			<div class= "sphere G1"></div>
+			<div class= "sphere O1"></div>
+			<div class= "sphere Q1"></div>
+			</div>
+		</div>
+
+		<div class="letter-definition" data-character="r">
+			<div class="letter">
+			<div class="sphere"></div>
+			<div class="sphere BD2"></div>
+			<div class="sphere BD3"></div>
+			<div class="sphere BD4"></div>
+			<div class="sphere BD5"></div>
+			<div class="sphere BD6"></div>
+			<div class="sphere BD7"></div>
+			<div class="sphere BD8"></div>
+			<div class="sphere BD9"></div>
+			<div class="sphere R5"></div>
+			<div class="sphere R7"></div>
+			</div>
+		</div>
+
+		<div class="letter-definition" data-character="s">
+			<div class="letter">
+			<div class="sphere S5"></div>
+			<div class="sphere BD5"></div>
+			<div class="sphere BD6"></div>
+			<div class="sphere BD8"></div>
+			<div class="sphere BD9"></div>
+			<div class="sphere BD10"></div>
+			<div class="sphere BD11"></div>
+			<div class="sphere S3"></div>
+			<div class="sphere S4"></div>
+			<div class="sphere BD12"></div>
+			</div>
+		</div>
+
+		<div class="letter-definition" data-character="t">
+			<div class= "letter">
+			<div class="sphere I1"></div>
+			<div class="sphere I2"></div>
+			<div class="sphere I3"></div>
+			<div class="sphere I4"></div>
+			<div class="sphere T1"></div>
+			<div class="sphere T2"></div>
+			</div>
+		</div>
+
+		<div class="letter-definition" data-character="u">
+			<div class= "letter type">
+			<div class= "sphere"></div>
+			<div class= "sphere C3"></div>
+			<div class= "sphere C4"></div>
+			<div class= "sphere C5"></div>
+			<div class= "sphere C6"></div>
+			<div class= "sphere h5"></div>
+			<div class= "sphere C8"></div>
+			<div class= "sphere G1"></div>
+			<div class= "sphere O1"></div>
+			</div>
+		</div>
+
+		<div class="letter-definition" data-character="v">
+			<div class="letter">
+			<div class="sphere V1"></div>
+			<div class="sphere V2"></div>
+			<div class="sphere V3"></div>
+			<div class="sphere V4"></div>
+			<div class="sphere V5"></div>
+			<div class="sphere V6"></div>
+			<div class="sphere V7"></div>
+			</div>
+		</div>
+
+		<div class="letter-definition" data-character="w">
+			<div class="letter">
+			<div class="sphere"></div>
+			<div class="sphere BD2 "></div>
+			<div class="sphere BD3"></div>
+			<div class="sphere BD4"></div>
+			<div class="sphere W4"></div>
+			<div class="sphere M5"></div>
+			<div class="sphere W6"></div>
+			<div class="sphere h5"></div>
+			<div class="sphere h6"></div>
+			<div class="sphere h7"></div>
+			<div class="sphere h8"></div>
+			</div>
+		</div>
+
+		<div class="letter-definition" data-character="x">
+			<div class="letter">
+			<div class="sphere"></div>
+			<div class="sphere BD4"></div>
+			<div class="sphere X4"></div>
+			<div class="sphere M5"></div>
+			<div class="sphere X6"></div>
+			<div class="sphere h5"></div>
+			<div class="sphere X7"></div>
+			<div class="sphere X5"></div>
+			<div class="sphere h8"></div>
+			</div>
+		</div>
+
+		<div class="letter-definition" data-character="y">
+			<div class= "letter">
+			<div class="sphere"></div>
+			<div class="sphere X4"></div>
+			<div class="sphere M5"></div>
+			<div class="sphere h5"></div>
+			<div class="sphere X5"></div>
+			<div class="sphere Y3"></div>
+			<div class="sphere I4"></div>
+			</div>
+		</div>
+
+		<div class="letter-definition" data-character="z">
+			<div class="letter">
+			<div class="sphere"></div>
+			<div class="sphere BD4"></div>
+			<div class="sphere X6"></div>
+			<div class="sphere M5"></div>
+			<div class="sphere BD5"></div>
+			<div class="sphere BD6"></div>
+			<div class="sphere h5"></div>
+			<div class="sphere X5"></div>
+			<div class="sphere BD10"></div>
+			<div class="sphere BD11"></div>
+			<div class="sphere h8"></div>
+			</div>
+		</div>
+
+		<div class="letter-definition" data-character="0">
+			<div class="letter">
+			<div class= "sphere BD5"></div>
+			<div class= "sphere BD6"></div>
+			<div class= "sphere zero"></div>
+			<div class= "sphere zero2"></div>
+			<div class= "sphere BD11"></div>
+			<div class= "sphere BD10"></div>
+			<div class= "sphere zero4"></div>
+			<div class= "sphere zero3"></div>
+			</div>
+		</div>
+
+		<div class="letter-definition" data-character="1">
+			<div class= "letter">
+			<div class="sphere I1"></div>
+			<div class="sphere I2"></div>
+			<div class="sphere I3"></div>
+			<div class="sphere I4"></div>
+			<div class="sphere onezy"></div>
+			</div>
+		</div>
+
+		<div class="letter-definition" data-character="2">
+			<div class="letter">
+			<div class="sphere two1"></div>
+			<div class="sphere BD4"></div>
+			<div class="sphere X6"></div>
+			<div class="sphere M5"></div>
+			<div class="sphere BD5"></div>
+			<div class="sphere BD6"></div>
+			<div class="sphere X5"></div>
+			<div class="sphere BD10"></div>
+			<div class="sphere BD11"></div>
+			</div>
+		</div>
+
+		<div class="letter-definition" data-character="3">
+			<div class="letter">
+			<div class="sphere BD5"></div>
+			<div class="sphere BD6"></div>
+			<div class="sphere BD7"></div>
+			<div class="sphere BD8"></div>
+			<div class="sphere BD9"></div>
+			<div class="sphere BD10"></div>
+			<div class="sphere BD11"></div>
+			<div class="sphere BD12"></div>
+			</div>
+		</div>
+
+		<div class="letter-definition" data-character="4">
+			<div class= "letter">
+			<div class="sphere A1"></div> 
+			<div class="sphere A2"></div> 
+			<div class="sphere A4"></div> 
+			<div class="sphere A8"></div>
+			<div class="sphere four1"></div>
+			<div class="sphere h5"></div>
+			<div class="sphere h6"></div>
+			<div class="sphere h7"></div>
+			<div class="sphere h8"></div>
+			</div>
+		</div>
+
+		<div class="letter-definition" data-character="5">
+			<div class="letter">
+			<div class="sphere"></div>
+			<div class="sphere BD2"></div>
+			<div class="sphere BD5"></div>
+			<div class="sphere BD6"></div>
+			<div class="sphere BD8"></div>
+			<div class="sphere BD9"></div>
+			<div class="sphere BD10"></div>
+			<div class="sphere BD11"></div>
+			<div class="sphere h4"></div>
+			<div class="sphere BD12"></div>
+			</div>
+		</div>
+
+		<div class="letter-definition" data-character="6">
+			<div class="letter">
+			<div class= "sphere BD5"></div>
+			<div class= "sphere BD6"></div>
+			<div class= "sphere zero"></div>
+			<div class= "sphere zero2"></div>
+			<div class= "sphere BD11"></div>
+			<div class= "sphere BD10"></div>
+			<div class= "sphere zero4"></div>
+			<div class= "sphere M5"></div>
+			</div>
+		</div>
+
+		<div class="letter-definition" data-character="7">
+			<div class="letter">
+			<div class= "sphere BD5"></div>
+			<div class= "sphere BD6"></div>
+			<div class="sphere V1"></div>
+			<div class="sphere V2"></div>
+			<div class="sphere V5"></div>
+			<div class="sphere V7"></div>
+			</div>
+		</div>
+
+		<div class="letter-definition" data-character="8">
+			<div class="letter">
+			<div class="sphere S5"></div>
+			<div class="sphere BD5"></div>
+			<div class="sphere BD6"></div>
+			<div class="sphere BD8"></div>
+			<div class="sphere BD9"></div>
+			<div class="sphere BD10"></div>
+			<div class="sphere BD11"></div>
+			<div class="sphere eight1"></div>
+			<div class="sphere eight2"></div>
+			<div class="sphere BD12"></div>
+			</div>
+		</div>
+
+		<div class="letter-definition" data-character="9">
+			<div class="letter">
+			<div class= "sphere two1"></div>
+			<div class= "sphere BD5"></div>
+			<div class= "sphere BD6"></div>
+			<div class="sphere V1"></div>
+			<div class="sphere V2"></div>
+			<div class="sphere V5"></div>
+			<div class="sphere BD9"></div>
+			</div>
+		</div>
+
+		<div class="letter-definition" data-character=".">
+			<div class= "letter">
+			<div class="sphere I4"></div>
+			</div>
+		</div>
+
+
+		<div class="letter-definition" data-character="?">
+			<div class="letter">
+			<div class="sphere S5"></div>
+			<div class="sphere BD5"></div>
+			<div class="sphere BD6"></div>
+			<div class="sphere BD7"></div>
+			<div class="sphere BD8"></div>
+			<div class="sphere I4"></div>
+			</div>
+		</div>
+
+		<div class="letter-definition" data-character="!">
+			<div class= "letter">
+			<div class="sphere C1"></div>
+			<div class="sphere I2"></div>
+			<div class="sphere M5"></div>
+			<div class="sphere I4"></div>
+			</div>
+		</div>
+			
+		<div class="letter-definition" data-character=",">
+			<div class= "letter">
+			<div class="sphere V1"></div>
+			<div class="sphere V2"></div>
+			</div>
+		</div>
+
+		<div class="letter-definition" data-character="&ldquo;">
+			<div class="letter">
+			<div class="sphere S5"></div>
+			<div class="sphere BD5"></div>
+			<div class="sphere QU1"></div>
+			<div class="sphere QU2"></div>
+			</div>
+		</div>
+			
+
+		<div class="letter-definition" data-character="&rdquo;">
+			<div class="letter">
+			<div class="sphere BD6"></div>
+			<div class="sphere eight1"></div>
+			<div class="sphere QU3"></div>
+			<div class="sphere QU4"></div>
+			</div>
+		</div>
+
+</div>
+
+
+	<div class="button-container">
+		<button>Again</button>
+	</div>
+
+	<div class="list-one"></div>
+	<div class="list-two"></div>
+	<div class="list-three"></div>
+	<div class="list-four"></div>
+	<!-- 
+	***** START JAVASCRIPT ***** 
+	-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+
+			// list one content
+			var one = [
+				"CARPOOL",
+				"WHEEL",
+				"COMMUTE",
+				"DRIVE",
+				"RIDE",
+				"SHARE",
+				"AROUND",
+				"EXPRESS",
+				"QUICK",
+				"FAST",
+				"ON TIME",
+				"ROUTE",
+
+			
+				""
+
+			];
+
+			// list two content
+			var two = [
+				"is lazy",
+				"is sexy",
+				"is out",
+				"is ugly",
+				"is black",
+				"is green",
+				"is rough",
+				"is high",
+				"is curious",
+				"is hot",
+				"is cute",
+				"is square",
+				"is dirty",
+				"is metal",
+				"is dead",
+				"is dry",
+				"is loud",
+				"is back",
+				"is sad",
+				"is empty",
+				"is red",
+				"is free",
+				"is paid for"
+			];
+
+			// list three content
+			var three = [
+				"and I seek",
+				"and I endorse",
+				"and I drop",
+				"and I push",
+				"and I snap to",
+				"and I run with",
+				"and I express my feelings to",
+				"and I turn to",
+				"and I work for",
+				"and I stroll with",
+				"and I dance with",
+				"and I walk with",
+				"and I report to",
+				"and I sit on",
+				"and I honor",
+				"and I play with",
+				"and I krank with",
+				"and I use up my"
+
+
+
+			];
+
+			// list four content
+			var four = [
+				"glasses",
+				"dogs",
+				"hats",
+				"sweats",
+				"boxers",
+				"cups",
+				"shells",
+				"life",
+				"cities",
+				"chickens",
+				"chairs",
+				"sticks",
+				"beans",
+				"butterflies",
+				"leaves",
+				"clouds",
+				"cranes",
+				"hills",
+				"his butt",
+				"weed",
+				"my back",
+				"wood",
+				"tents",
+				"spirits",
+				"fire",
+				"radios",
+				"waves",
+				"cones"
+			];
+
+			// This is a very common randomizing function.
+			// It takes a list (array) and returns one at random.
+			function select_random(x){
+				y = x[Math.floor(Math.random()*x.length)];
+				return y;
+			}
+
+			function generate(){
+
+				// Select a random item from each list
+				var selected_one = select_random(one);
+				var selected_two = select_random(two);
+				var selected_three = select_random(three);
+				var selected_four = select_random(four);
+
+				// Take the selected (random) item from list and make it visible
+				$('.list-one').html(selected_one);
+				$('.list-two').html(selected_two);
+				$('.list-three').html(selected_three);
+			    $('.list-four').html(selected_four);
+
+			}
+
+			$('button').click(function(){
+				generate();
+			});
+
+			generate();
+			
+		});
+
+
+    // Type using bubble type
+
+    $('.letters').each(function() {
+
+      var $letterWrapper = $(this);
+      var letters = $letterWrapper.html().split('');
+      var letterArray = [];
+
+      for (i = 0; i < letters.length; i++) {
+        console.log(letters[i]);
+
+        var character = letters[i];
+        var chracterDefinition = $('.letter-definition[data-character="' + character + '"]').html();
+        var characterHTML = '<div class="letter" data-character="' + character + '">' + chracterDefinition + '</div>';
+        
+        letterArray.push(characterHTML);
+      };
+
+      $letterWrapper.html(letterArray);
+
+    });
+
+
+
+    // Random bubble size
+
+    var colors = [
+        "rgba(186, 92, 186, 0.7)",
+        "rgba(131,224,224,0.7)",
+        "rgba(13, 199, 165, 0.7)",
+        "rgba(86, 60, 232, 0.7)",
+        "rgba(242, 206, 233, 0.7)",
+        "rgba(117, 238, 137, 0.7)",
+        "rgba(213, 236, 158, 0.7)"
+    ];
+
+    $('.sphere').each(function() {
+
+        var min = 35;
+        var max = 65;
+
+        var random = Math.floor(Math.random() * (max - min + 1)) + min;
+
+        var randomColor = colors[Math.floor(Math.random()*colors.length)];
+        console.log("random color is " + randomColor);
+        
+        $(this).css("width", random +"px");
+        $(this).css("height", random +"px");
+        $(this).css("background", randomColor);
+    });
+
+
+    // jQuery toggle colors. click on any of the circles
+
+    var state = 'one';
+
+    // Change to "style two"
+    function changeToTwo(){
+        $('.sphere, .bigCircle, .lilCircle, .backCircle').addClass('style-two');
+        state = 'two';
+    }
+
+    // Change back to one (default)
+    function changeToOne(){
+        $('.sphere, .bigCircle, .lilCircle, .backCircle').removeClass('style-two');
+        state = 'one';
+    }
+
+    // Click the button
+    $('.lilCircle').click(function(){
+
+        if(state == 'one'){
+          changeToTwo();
+        }
+        
+        else {
+          changeToOne();
+        }    
+    
+    });
+
+});
+
+
+// pretty scrolling
+$('a').click(function(){
+    $('html, body').animate({
+        scrollTop: $( $(this).attr('href') ).offset().top
+    }, 500);
+    return false;
+});
+
+// background color
+var colors = [
+    "linear-gradient(#353358, #77B7E5, #FFF)",
+    "linear-gradient(red, green, blue)",
+    "linear-gradient(yellow, blue)",
+    "rgba(242, 206, 233, 0.7)",
+    "black",
+    "white"
+];
+
+var counter = 0;
+
+$('button').click(function(){
+    if (counter == colors.length) { counter = 0; }
+    var currentColor = colors[counter];
+    $('.bigCircle, style-two').css("background", currentColor);
+    counter++;
+});
+	</script>
+
+
+
+
+	<!-- 
+	***** END JAVASCRIPT ***** 
+	-->
+</body>
+
+</html>

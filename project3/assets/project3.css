@@ -1,6 +1,7 @@
 body {
 	font-family: Arial;
 /*	background: rgba(255,0,230,0.3);*/
+overflow: hidden;
 }
 	
 p {
@@ -11,9 +12,6 @@ a {
 	color: black;
 	font-size: 30px;
 }
-a:hover {
-	color: magenta;
-}
 
 .container {
     width: 900px;
@@ -21,14 +19,17 @@ a:hover {
     text-align: center;
 }
 .bigCircle {
-	width: 600px;
-	height: 600px;
+	width: 290px;
+	height: 290px;
 	border-radius: 50%;
 /*	border: 1px black solid;*/
 	position: fixed;
-	background: rgba(131,224,224,0.48);
-	left: 50%;
-	top: 50%;
-	transform: translate(-50%, -50%);
+	background: rgba(131,224,224,0.5);
+	left: 489px;
+	top: 153px;
 	z-index: -1;
+	transition: all .4s ease-in-out;
+}
+.bigCircle:hover {
+	transform: scale(2);
 }
