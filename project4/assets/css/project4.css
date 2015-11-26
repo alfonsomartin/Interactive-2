@@ -1,54 +1,114 @@
-body {
-	background: gray;
-	position: relative;
+html, body {
+    margin:0;
+    padding:0;
 }
-h1, h2 {
-	color: pink;
-	font-size: 36px;
+
+body {
 	position: relative;
-	left: 100px;
+	padding: 0;
+	overflow-x: hidden;
+}
+#container {
+	width: 100%;
+	margin: 0 auto;
+	background: linear-gradient(purple,pink);
+
+}
+.containerWords {
+	width: 800px;
+	position: relative;
+	left:80px;
+}
+
+.containerWords.down {
+	margin-top:300px;
+	width: 1100px;
+}
+
+h1 {
+	color: white;
+	font-family:'Industria W01 Inline';
+	font-size: 150px;
+	font-weight: normal;
+	width: 600px;
+	padding: 0px;
+	margin: 40px 0 0 0;
+	line-height: .85;
+}
+
+h2 {
+	color: white;
+	font-size: 36px;
+	font-family: Arial, sans-serif;
+	margin: 10px 0 0 0;
 }
 
 h3 {
-	position: relative;
-	left: 100px;
-	width: 100px;
+	color: yellow;
+	font-size: 36px;
+	font-family: Arial, sans-serif;
+	margin: 80px 0 0 0;
 }
 
-h3:hover {
+
+
+h5 {
+	width: 100px;
+	display: inline-block;
+}
+
+h5:hover {
 	cursor: pointer;
 }
 
 h4 {
 	display: inline-block;
-	position: relative;
-	left:100px;
-}
-
-#container {
-	width: 100%;
-	margin: 0 auto;
-}
-.down {
-	position: relative;
-	top:500px;
 }
 
 .jem {
-	position: absolute;
-	top: -300px;
-	right: -50px;
+    position: absolute;
+    top: -300px;
+    right: -100px;
 }
 .jem img {
-	height: 1200px;
+	height: 1150px;
+	z-index: 1;
+	-webkit-transform: rotate(16deg);
 }
-.line {
-	width: 1050px;
-	margin: 0 auto;
-	height: 2px;
-	background: black;
+.jemLogo {
+	position: absolute;
+	top: 0;
+	right: 0px;
+	z-index: 2;
+}
+.jemLogo img {
+	height: 375px;
+}
 
+table, td, th {
+	margin-top: 30px;
+	color: white;
+	font-size: 24px;
+	font-family: Arial, sans-serif;
+    border-top: 2px solid white;
+    border-collapse: collapse;
+    padding: 10px 0 10px 0;
+    text-align: left;
 }
+
+th {
+	font-size: 30px;
+}
+td a {
+	text-decoration: none;
+	color: yellow;
+}
+
+td a:hover {
+	color: purple;
+}
+
+
 /* Media Queries*/
 /*@media screen and (max-width: 1024px) {
   body { background: red; }
