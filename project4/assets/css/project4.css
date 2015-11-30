@@ -92,7 +92,7 @@ table, td, th {
 	font-family: Arial, sans-serif;
     border-top: 2px solid white;
     border-collapse: collapse;
-    padding: 10px 0 10px 0;
+    padding: 40px 0 40px 0;
     text-align: left;
 }
 
@@ -108,7 +108,22 @@ td a:hover {
 	color: purple;
 }
 
-
+.VIP {
+	background: gray;
+	width: 100%;
+	height: 340px;
+	margin-top: 20px;
+	position: relative;
+}
+.packs {
+	display: inline-block;
+    background: pink;
+    height: 210px;
+    width: 210px;
+    position: relative;
+    margin-left:80px;
+    margin-top: 65px;
+}
 /* Media Queries*/
 /*@media screen and (max-width: 1024px) {
   body { background: red; }
@@ -123,10 +138,8 @@ td a:hover {
   h1  { display: block; width: 100%; margin: 50px 0 50px 0; font-size: 12px;}
 
 }
-
+}*/
 @media screen and (max-width: 480px) {
   body { background: pink;}
   div { display: block; width: 100%; margin: 50px 0 50px 0;}
-  h1 {font-size: 48px;}
-
-}*/
+}
