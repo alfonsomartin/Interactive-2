@@ -116,16 +116,16 @@ button:hover {
 	border-radius: 50%;
 	position: fixed;
 	background: rgba(131,224,224,0.5);
-	right: 25px;
-	top: 350px;
+	left: 25px;
+	top: 135px;
 	cursor: pointer;
 	z-index: 5;
 	transition: all .3s ease-in-out;
 }
 
 .anotherCircle.what {
-	right: 25px;
-	top: 470px;
+	left: 25px;
+	top: 240px;
 }
 
 .anotherCircle.what:hover {
