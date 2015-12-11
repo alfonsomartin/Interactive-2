@@ -24,6 +24,9 @@ body {
 .enter img {
 	width: 600px;
 }
+.enter img {
+	cursor: pointer;
+}
 .social-media {
 	display: inline;
 }
