@@ -1,0 +1,566 @@
+body {
+	font-family: Arial;
+/*	background: rgba(255,0,230,0.3);*/
+	overflow-x: hidden;
+}
+
+a, a:link {
+	text-decoration: none;
+}
+
+/*-----------------------------------FOR JAVA */
+.letter-definition {
+    display: none;
+}
+/*-----------------------------------BIG CIRCLE & LIL CIRCLE*/
+.bigCircle {
+	width: 600px;
+	height: 600px;
+	border-radius: 50%;
+	position: fixed;
+	background: rgba(131,224,224,0.5);
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	z-index: -1;
+}
+.lilCircle {
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+/*	border: 1px black solid;*/
+	position: fixed;
+/*	background: rgba(131,224,224,0.5);
+*/	border: 1px black solid;
+	right: 50px;
+	top: 50px;
+	z-index: 7;
+	cursor: pointer;
+}
+
+.backCircle {
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	background: rgba(131,224,224,0.5);
+	margin: 350px auto;
+	text-align: center;
+	font-size: 72px;
+	color: white;
+}
+
+.bubble-type-start {
+	position: relative;
+    left: 30px;
+    bottom: 90px;
+}
+
+/*-----------------------------------DESCRIPTION PAGE*/
+p {
+	width: 450px;
+	font-size: 18px;
+	margin: 500px auto;
+	line-height: 1.4em;
+}
+
+.scale {
+	transform: scale(0.8);
+}
+
+
+/*-----------------------------------LETTERS & NUMBERS */
+.container {
+    width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.letter {
+	height: 170px;
+    width: 170px;
+    margin: 20px;
+    position: relative;
+	display: inline-block;
+/*	background: yellow; */
+}
+
+.sphere {
+	position: absolute;
+	background: rgba(131,224,224,0.5);
+	/*border: 1px aqua solid;*/
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	transition: all .3s ease-in-out;
+} 
+
+.sphere:after {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	content: '';
+	background: rgba(255, 255, 255, 0.75);
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+}
+
+.sphere:hover {
+	transform: scale(1.5);
+}
+
+.style-two {
+	background: white !important;
+	opacity: 1 !important;
+	border: 1px solid black !important;
+	-webkit-text-stroke: 1.5px black;
+}
+
+.style-three {
+	background: blue !important;
+	opacity: 1 !important;
+}
+
+/*AAAAAAAAAAAAAA*/
+
+.sphere.A1 {
+	left: 60px;
+}
+.sphere.A2 {
+	top: 40px;
+	left: 40px;
+}
+.sphere.A3 {
+	top: 40px;
+	left: 80px;
+}
+.sphere.A4 {
+	top: 80px;
+	left: 20px;
+}
+.sphere.A5 {
+	top: 80px;
+	left: 100px;
+}
+.sphere.A6 {
+	top: 120px;
+	left: 0px;
+}
+.sphere.A7 {
+	top: 120px;
+	right: 0px;
+}
+.sphere.A8 {
+	top: 80px;
+	left: 60px;
+}
+
+/*BBBBBBBBBBBBB*//*DDDDDDDDDDDD*//*EEEEEEEEEEE*/
+/*FFFFFFFFFFFF*//* A LOT OF OTHER LETTERS */
+
+.sphere.BD2 {
+	top:40px;
+}
+.sphere.BD3 {
+	top:80px;
+}
+.sphere.BD4 {
+	top:120px;
+}
+.sphere.BD5 {
+	left:40px;
+}
+.sphere.BD6 {
+	left:80px;
+}
+.sphere.BD7 {
+	top: 30px;
+	left:110px;
+}
+.sphere.BD8 {
+    right: 40px;
+    top: 60px;
+}
+.sphere.BD9 {
+    right: 80px;
+    top: 60px;
+}
+.sphere.BD10 {
+    right: 40px;
+    bottom: 0px;
+}
+.sphere.BD11 {
+    right: 80px;
+    bottom: 0px;
+}
+.sphere.BD12 {
+	left:110px;
+	bottom: 30px;
+}
+.sphere.D1 {
+	left:110px;
+	bottom: 60px;
+}
+.sphere.D2 {
+	top: 25px;
+	left:110px;
+}
+.sphere.D3 {
+	left:110px;
+	bottom: 25px;
+}
+
+/*CCCCCCCCCCC*//*GGGGGGGGGGGG*/
+
+.sphere.C1 {
+	left: 60px;
+}
+.sphere.C2 {
+	left: 20px;
+	top: 10px;
+}
+.sphere.C3 {
+	left: 0px;
+	top:40px;
+}
+.sphere.C4 {
+	left: 0px;
+	top:80px;
+}
+.sphere.C5 {
+	left: 20px;
+	bottom: 10px;
+}
+.sphere.C6 {
+	left: 60px;
+	bottom: 0px;
+}
+.sphere.C7 {
+	left: 100px;
+	top: 10px;
+}
+.sphere.C8 {
+	left: 100px;
+	bottom: 10px;
+}
+.sphere.G1 {
+	right: 0px;
+	top: 80px;
+}
+.sphere.G2 {
+	right: 40px;
+	top: 80px;
+}
+
+/*HHHHHHHHHH*/
+
+.sphere.h2 {
+	top:40px;
+}
+.sphere.h3 {
+	top:80px;
+}
+.sphere.h4 {
+	bottom: 0px;
+}
+.sphere.h5 {
+	right: 0;
+	top:0;
+}
+.sphere.h6 {
+	right: 0;
+	top:40px;
+}
+.sphere.h7 {
+	right:0;
+	top: 80px;
+}
+.sphere.h8 {
+	right:0;
+	bottom: 0px;
+}
+.sphere.h9 {
+	left:40px;
+	top:60px;
+}
+.sphere.h10 {
+	right:40px;
+	top:60px;
+}
+
+/*IIIIIIIIIIII*/
+
+.sphere.I1 {
+	right: 60px;
+}
+.sphere.I2 {
+	right: 60px;
+	top: 40px;
+}
+.sphere.I3 {
+	right: 60px;
+	top: 80px;
+}
+.sphere.I4 {
+	right: 60px;
+	bottom: 0px;
+}
+
+/*JJJJJJJJJJ*/
+
+.sphere.J4 {
+	left: 40px;
+	bottom: 0px;
+}
+.sphere.J3 {
+	left: 10px;
+	bottom: 40px;
+}
+
+/*KKKKKKKKKK*/
+
+.sphere.K4 {
+	left: 80px;
+	top: 40px;
+}
+.sphere.K5 {
+	left: 100px;
+	top: 0px;
+}
+.sphere.K6 {
+	left: 100px;
+	bottom: 0px;
+}
+.sphere.K7 {
+	left: 80px;
+	bottom: 40px;
+}
+.sphere.K8 {
+	left: 40px;
+	bottom: 60px;
+}
+
+/*LLLLLLLLLL*/
+
+.sphere.L4 {
+	left: 80px;
+	bottom: 0px;
+}
+.sphere.L5 {
+	left: 	40px;
+	bottom: 0px;
+}
+
+/*MMMMMMMM*/
+
+.sphere.M4 {
+	left: 40px;
+	top:20px;
+}
+.sphere.M5 {
+	left: 60px;
+	top:60px;
+}
+.sphere.M6 {
+	left: 80px;
+	top: 20px;
+}
+
+/*NNNNNNNN*/
+
+.sphere.N6 {
+	right: 40px;
+	top:100px;
+}
+
+/*OOOOOOOOO*/
+
+.sphere.O1 {
+	right: 0px;
+	top: 40px;
+}
+/*QQQQQQQQQ*/
+
+.sphere.Q1 {
+	right: 0px;
+	bottom: 0px;
+}
+
+/*RRRRRRRR*/
+
+.sphere.R5 {
+	top: 90px;
+	left: 90px;
+}
+.sphere.R7 {
+	bottom: 0px;
+	right: 10px;
+}
+
+/*SSSSSSS*/
+
+.sphere.S3 {
+	top: 20px;
+	right: 0px;
+}
+.sphere.S4 {
+	bottom: 20px;
+	left: 0px;
+}
+
+.sphere.S5 {
+	top: 30px;
+	left: 10px;
+}
+
+/*TTTTTTTT*/
+
+.sphere.T1 {
+	top: 0px;
+	left: 20px;
+}
+.sphere.T2 {
+	top:0;
+	right:20px;
+}
+
+/*VVVVVVVV*/
+
+.sphere.V1 {
+	bottom: 0;
+	left: 60px;
+}
+.sphere.V2 {
+	top: 80px;
+	left: 80px;
+}
+.sphere.V3 {
+	top: 80px;
+	left: 40px;
+}
+.sphere.V4 {
+	top: 40px;
+	left: 20px;
+}
+.sphere.V5 {
+	top: 40px;
+	left: 100px;
+}
+.sphere.V6 {
+	top: 0px;
+	left: 0px;
+}
+.sphere.V7 {
+	top: 0px;
+	right: 0px;
+}
+
+/*WWWWWWWWw*/
+
+.sphere.W4 {
+	left: 40px;
+	top:100px;
+}
+.sphere.W6 {
+	left: 80px;
+	top: 100px;
+}
+
+
+/*XXXXXXXX*/
+
+.sphere.X4 {
+	left: 30px;
+	top:30px;
+}
+.sphere.X5 {
+	left: 90px;
+	top:30px;
+}
+.sphere.X6 {
+	right: 90px;
+	top:90px;
+}
+.sphere.X7 {
+	left: 90px;
+	top: 90px;
+}
+
+/*YYYYYYY*/
+
+.sphere.Y3 {
+	right: 60px;
+	top: 90px;
+}
+
+/*000000000*/
+
+.sphere.zero {
+    left: 15px;
+    top: 40px;
+}
+.sphere.zero2 {
+    left: 15px;
+    top: 80px;
+}
+.sphere.zero3 {
+    left: 100px;
+    top: 40px;
+}
+.sphere.zero4 {
+    left: 100px;
+    top: 80px;
+}
+
+/*1111111111*/
+
+.sphere.onezy {
+	left: 30px;
+	top:20px;
+}
+
+/*22222222*/
+
+.sphere.two1 {
+	top: 30px;
+	left: 10px;
+}
+
+/*4444444*/
+
+.sphere.four1 {
+	top: 80px;
+	left: 90px;
+}
+
+/*88888888*/
+
+.sphere.eight1 {
+	top: 30px;
+	right: 10px;
+}
+
+.sphere.eight2 {
+	bottom: 30px;
+	left: 10px;
+}
+
+/*""""""*/
+
+.sphere.QU1 {
+	top: 30px;
+	left: 80px;
+}
+
+.sphere.QU2 {
+	left:100px;
+}
+
+.sphere.QU3 {
+	top: 30px;
+	right: 80px;
+}
+
+.sphere.QU4 {
+	right: 100px;
+}

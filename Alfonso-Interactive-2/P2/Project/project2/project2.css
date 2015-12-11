@@ -1,0 +1,73 @@
+body {
+	background: black;
+	font-size: 24px;
+	font-family: Arial, sans-serif;
+}
+h1 {
+	font-family: 'Astloch', cursive;
+	font-weight: 700;
+	font-size: 120px;
+	color: white;
+}
+.container {
+	margin: 0 auto;
+	text-align: center;
+}
+.column {
+	padding: 5px 10px 10px 10px;
+	width: 100px;
+	display: inline-block;
+	margin-right: 25px;
+	margin-top: -25px;
+}
+.column.one {
+	background: rgba(107,37,237,1);
+}
+.column.two {
+	background: rgba(80,183,126,1);
+}
+.column.three {
+	background: rgba(230,25,157,1);
+}
+.column.four {
+	background: rgba(199,217,119,1);
+}
+.column.five {
+	background: rgba(142,190,237,1);
+}
+a {
+	text-decoration: none;
+	color: white;
+	font-size: 18px;
+	line-height: 24px;
+}
+a:hover {
+	color: black;
+}
+a:link {
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+}
+p {
+	font-size: 30px;
+	color: black;
+}
+p:hover {
+	color: white;
+}
+.snowman {
+	font-size: 600px;
+	color: white;
+	margin-top: -170px;
+}
+ul {
+	width: 700px;
+	margin: 0 auto;
+	text-align: left;
+	padding:50px;
+}
+li {
+	color: white;
+}
