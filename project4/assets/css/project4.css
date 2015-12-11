@@ -8,7 +8,7 @@ body {
 	overflow-y: hidden;
 }
 .full-screen {
-	background: red;
+	background: linear-gradient(purple,pink);
 	position: fixed;
 	z-index: 99;
 	width:100vw;
